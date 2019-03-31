@@ -1,0 +1,57 @@
+
+Sinle User API'S:
+
+1. PIE/DONUT
+http://127.0.0.1:5000/getSinglePie?survey=Quarter 1&company=ITH&userid=588
+sample op: {"R1": 2.67, "R2": 2.83, "R3": 2.83, "R4": 2.83}
+
+2. BAR
+http://127.0.0.1:5000/getSingleBar?survey=Quarter 1&company=ITH&userid=588
+sample op: {"R1": [2.5, 2.25, 3.0], "R2": [2.5, 2.5, 2.0], "R3": [1.75, 2.0, 3.75], "R4": [1.75, 2.0, 3.75]}
+
+3. Single Radar
+http://127.0.0.1:5000/getSingleRadar?survey=Quarter 1&company=ITH&userid=588
+sample op: {"Physical": [2.5, 2.5, 1.75, 1.75], "Organisational": [2.25, 2.5, 2.0, 2.0], "Technical": [3.0, 2.0, 3.75, 3.75]}
+
+
+4. Single Radar charts (4 charts)
+http://127.0.0.1:5000/getSingleRadarBySector?survey=Quarter 1&company=ITH&userid=588
+sample op:  [{"sector": "R1", "labels": ["cat1", "cat7", "cat2", "cat3", "cat4", "cat5", "cat6"], "score": [3.0, 2.3333333333, 1.0, 3.0, 3.0, 3.0, 2.0]}, {"sector": "R2", "labels": ["cat8", "cat9", "cat10", "cat11", "cat12", "cat13", "cat14"], "score": [3.0, 3.0, 1.0, 1.5, 2.5, 4.0, 2.0]}, {"sector": "R3", "labels": ["cat15", "cat16", "cat17", "cat18", "cat19", "cat20", "cat21"], "score": [1.5, 2.0, 2.0, 5.0, 2.5, 2.0, 2.0]}, {"sector": "R4", "labels": ["cat22", "cat23", "cat24", "cat25", "cat26", "cat27", "cat28"], "score": [1.5, 2.0, 2.0, 5.0, 2.5, 2.0, 2.0]}]
+
+
+
+5. Single Spider chart
+http://127.0.0.1:5000/getSingleRadarAllSectors?survey=Quarter 1&company=ITH&userid=588
+sample op:  {"category": ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8", "cat9", "cat10", "cat11", "cat12", "cat13", "cat14", "cat15", "cat16", "cat17", "cat18", "cat19", "cat20", "cat21", "cat22", "cat23", "cat24", "cat25", "cat26", "cat27", "cat28"], "scores": [3.0, 1.0, 3.0, 3.0, 3.0, 2.0, 2.3333333333, 3.0, 3.0, 1.0, 1.5, 2.5, 4.0, 2.0, 1.5, 2.0, 2.0, 5.0, 2.5, 2.0, 2.0, 1.5, 2.0, 2.0, 5.0, 2.5, 2.0, 2.0]}
+
+
+Multiple User APIs:
+
+6.PIE/DONUT:
+http://127.0.0.1:5000/getAllPie?dataframe=dataframe_1553407527_545.xlsx
+
+7.BAR CHART:
+http://127.0.0.1:5000/getAllBar?dataframe=dataframe_1553407527_545.xlsx
+
+8.single RADAR CHART for multiple users:
+http://127.0.0.1:5000/getAllRadar?dataframe=dataframe_1553407527_545.xlsx
+
+9. 4 RADAR CHARTS by sector for multple users:
+http://127.0.0.1:5000/getAllRadarBySector?dataframe=dataframe_1553407527_545.xlsx
+
+10. Complete RADAR FULL CHART:
+http://127.0.0.1:5000/getAllRadarAllSectors?dataframe=dataframe_1553407527_545.xlsx
+
+
+
+#### USING SAMPE APIS for DEPARTMENT USAGE ###
+
+
+
+
+
+11. Questions Upload
+http://127.0.0.1:5000/questionsUpload?survey=Quarter 1&company=ITH& <File Object>
+
+12. Users Upload
+http://127.0.0.1:5000/usersUpload?survey=Quarter 1&company=ITH& <File Object>

@@ -1,0 +1,633 @@
+{
+	"survey": "Survey Name",
+	"company": "Company Name",
+
+
+	"F649081": {
+
+		"userid": "id",
+		"username": "username",
+		"emailid": "xyz@gmail.com",
+        "department": "dept Name",
+		"R1": {
+          "Physical": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ],
+          "Organisational": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ],
+          "Technical": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ]
+        },
+
+		"R2": {
+          "Physical": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ],
+          "Organisational": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ],
+          "Technical": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ]
+        },
+
+		"R3": {
+          "Physical": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ],
+          "Organisational": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ],
+          "Technical": [
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 1,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 1,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 2,
+              "qscore": 2,
+              "qconfidence": 2
+            },
+            {
+              "cid": 2,
+              "qid": 3,
+              "qscore": 4,
+              "qconfidence": 3
+            },
+            {
+              "cid": 2,
+              "qid": 1,
+              "qscore": 1,
+              "qconfidence": 1
+            }
+          ]
+        },
+
+		"R4": {
+			"Physical": [{
+					"cid": 1,
+					"qid": 1,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 1,
+					"qid": 2,
+					"qscore": 2,
+					"qconfidence": 2
+				},
+				{
+					"cid": 1,
+					"qid": 3,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 1,
+					"qid": 1,
+					"qscore": 1,
+					"qconfidence": 1
+				},
+
+				{
+					"cid": 2,
+					"qid": 1,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 2,
+					"qid": 2,
+					"qscore": 2,
+					"qconfidence": 2
+				},
+				{
+					"cid": 2,
+					"qid": 3,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 2,
+					"qid": 1,
+					"qscore": 1,
+					"qconfidence": 1
+				}
+			],
+
+			"Organisational": [{
+					"cid": 1,
+					"qid": 1,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 1,
+					"qid": 2,
+					"qscore": 2,
+					"qconfidence": 2
+				},
+				{
+					"cid": 1,
+					"qid": 3,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 1,
+					"qid": 1,
+					"qscore": 1,
+					"qconfidence": 1
+				},
+
+				{
+					"cid": 2,
+					"qid": 1,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 2,
+					"qid": 2,
+					"qscore": 2,
+					"qconfidence": 2
+				},
+				{
+					"cid": 2,
+					"qid": 3,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 2,
+					"qid": 1,
+					"qscore": 1,
+					"qconfidence": 1
+				}
+
+			],
+			"Technical": [
+
+				{
+					"cid": 1,
+					"qid": 1,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 1,
+					"qid": 2,
+					"qscore": 2,
+					"qconfidence": 2
+				},
+				{
+					"cid": 1,
+					"qid": 3,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 1,
+					"qid": 1,
+					"qscore": 1,
+					"qconfidence": 1
+				},
+
+				{
+					"cid": 2,
+					"qid": 1,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 2,
+					"qid": 2,
+					"qscore": 2,
+					"qconfidence": 2
+				},
+				{
+					"cid": 2,
+					"qid": 3,
+					"qscore": 4,
+					"qconfidence": 3
+				},
+				{
+					"cid": 2,
+					"qid": 1,
+					"qscore": 1,
+					"qconfidence": 1
+				}
+
+			]
+
+		}
+	}
+
+
+
+}

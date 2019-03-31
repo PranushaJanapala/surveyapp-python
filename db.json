@@ -1,0 +1,24 @@
+{
+	"survey": "Survey Name",
+	"company": "Company Name",
+	"R1": {
+		"Physical": [],
+		"Organisational": [],
+		"Technical": []
+	},
+	"R2": {
+		"Physical": [],
+		"Organisational": [],
+		"Technical": []
+	},
+	"R3": {
+		"Physical": [],
+		"Organisational": [],
+		"Technical": []
+	},
+	"R4": {
+		"Physical": [],
+		"Organisational": [],
+		"Technical": []
+	}
+}

@@ -1,0 +1,51 @@
+mongoimport --host localhost --db BKBASE --collection questions --file C:\Users\bhara\Desktop\workspace\db.json
+
+mongoexport --db BKBASE --collection questions --out output.json
+
+db.users.find({'J649081.R4.Physical.cid':1 },{'J649081.R4.Physical.cid':1 })
+
+now query/projection has to be matched with certain value using $match or $matchElem
+
+db.users.find({'details.R4.Physical.cid': 2} , {'details.R1':1})
+
+db.users.aggregate([
+{$match:{"userid":'J649081'}},
+{
+            $unwind : "$rows"
+        }, {
+            $match : {
+                "rows.cid" : {
+                    $eq : 1
+                }                
+            }
+        }
+        
+        ])
+
+APIs:
+http://127.0.0.1:5000/chartsOne?survey='ABC Name'&company='XVC Name'userid='J649081'
+
+
+
+db.users.aggregate([
+{$match:{"userid":'1234'}},
+{
+            $unwind : "$rows"
+        }, {
+            $match : {
+                "rows.cid" : {
+                    $eq : 1
+                } ,
+ 
+                "rows.sector" : {
+                    $eq : 'R1'
+                }        
+            }
+        }
+        
+        ])
+
+
+
+
+
