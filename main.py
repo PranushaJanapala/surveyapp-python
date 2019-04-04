@@ -336,7 +336,7 @@ def chartsAll():
     survey = request.args.get('survey')
     company = request.args.get('company')
     host,base,colection,dbuser,pwd=bl.mongoInit('users')
-
+    print(host, base, colection, dbuser, pwd, "Checkinggg", survey, company, sectors)
     df=pd.DataFrame(columns=['sector','subsector','cid','qid','qscore','qconfidence'])
     for sector in sectors:
         document= bl.getSurveyDetailsAll(survey,company,host,base,colection,dbuser,pwd,sector)
@@ -719,6 +719,16 @@ def getSinglePie():
     data=cl.pie(df)
     return data
 
+@app.route('/getTable', methods=['GET'])
+def getTable():
+    survey = request.args.get('survey')
+    company = request.args.get('company')
+    userid= request.args.get('userid')
+    r = requests.get("http://127.0.0.1:5000/chartsOne?survey={}&company={}&userid={}".format(survey,company,userid))
+    jsonres=r.json()
+    df=pd.DataFrame(jsonres)
+    data=cl.getTable(df,sectors,subsectors)
+    return data
 
 @app.route('/getSingleBar', methods=['GET'])
 def getSingleBar():
@@ -732,6 +742,14 @@ def getSingleBar():
     df=pd.DataFrame(jsonres)
 
     data=cl.bar(df)
+    return data
+
+@app.route('/getAllRadarAllSectors', methods=['GET'])
+def getAllRadarAllSectors():
+
+    dataframe = request.args.get('dataframe')
+    df=pd.read_excel(dataframe)
+    data=cl.radarAllSectors(df,sectors)
     return data
 
 
@@ -779,17 +797,8 @@ def getSingleTable():
     df=pd.DataFrame(jsonres)
     df=df.sort_values(['sector','cid','subsector'])
     df=df[df['sector']=='R1']
-
-
-
     data=dumps(df)
     return data
-
-
-
-
-
-
 
 @app.route('/temp', methods=['GET', 'POST'])
 def temp():
@@ -824,9 +833,10 @@ def sendmails(survey,company,department,email):
 @app.route('/userlogin', methods=['GET', 'POST'])
 def userlogin():
     data = request.get_json()
-    jsonFile = 'C:/Users/headway/PycharmProjects/untitled/sessionTemplate.json'
-    bl.userLogin(data, jsonFile)
-    return "nothing"
+    jsonFile = 'C:/Users/v.subramani/Documents/WRKDIR/SurveyApp/surveyPython/sessionTemplate.json'
+    check = bl.userLogin(data, jsonFile)
+    print(check)
+    return json.dumps(check)
 
 
 def sendmail(survey,company,mails):

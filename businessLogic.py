@@ -176,7 +176,7 @@ def getSurveyDetails(userid,survey,company,host,base,colection,user,pwd,sector):
    return document
 
 def getSurveyDetailsAll(survey,company,host,base,colection,user,pwd,sector):
-   col=mongoConnect(host,base,colection,user,pwd)
+   col, _=mongoConnect(host,base,colection,user,pwd)
    survey='%s' % survey
    survey=survey.strip("'")
    company='%s' % company
@@ -187,7 +187,7 @@ def getSurveyDetailsAll(survey,company,host,base,colection,user,pwd,sector):
 
 
 def getSurveyDetailsByDept(survey,company,host,base,colection,user,pwd,sector,dept):
-   col=mongoConnect(host,base,colection,user,pwd)
+   col, _=mongoConnect(host,base,colection,user,pwd)
    survey='%s' % survey
    survey=survey.strip("'")
    company='%s' % company
@@ -206,7 +206,7 @@ def mongoInit(colection):
     return host,base,colection,user,pwd
 
 def getcompanynames():
-    col, db = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
+    col, _ = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
     company = []
     json_response = list(col.find())
     for i in json_response:
@@ -217,21 +217,21 @@ def getcompanynames():
 
 
 def getcompanysurveynames(company):
-    col, db = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
+    col, _= mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
     surveys = []
     json_response = list(col.find())
     for i in json_response:
-        for attribute, value in i.items():
+        for _, value in i.items():
             if value == company:
                 surveys.append(i['survey'])
     return surveys
 
 def getdepartmentnames(company,survey):
-    col, db = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
+    col, _ = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
     department_list = []
     json_response = list(col.find({"company": company, "survey": survey},{"users": 1.0, "_id": 0}))
     for i in json_response:
-        for attribute, value in i.items():
+        for _, value in i.items():
             for val in value:
                 department_list.append(val['department'])
         department_list = list(dict.fromkeys(department_list))
@@ -240,13 +240,13 @@ def getdepartmentnames(company,survey):
 def displayquestions(survey,company,sector,subsector,cname):
     #cid = category[8:]
     #print(cid)
-    col,db = mongoConnect("localhost", "Surveyapp", "questions", "user", "pwd")
+    col,_ = mongoConnect("localhost", "Surveyapp", "questions", "user", "pwd")
     questions = []
     cname_key = sector + "." + subsector
     json_response = list(col.find({"survey": survey,"company": company},{cname_key: 1.0, "_id": 0}))
     for i in json_response:
-        for attribute, value in i.items():
-            for attr, val in value.items():
+        for _, value in i.items():
+            for _, val in value.items():
                 for v in val:
                     if v['cname'] == cname:
                         questions.append(v)
@@ -344,7 +344,7 @@ def saveUserResponse(data):
     print("done")
 
 def userLogin(data, jsonFile):
-    col, db = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
+    col, _ = mongoConnect("localhost", "Surveyapp", "userdetails", "user", "pwd")
     print(data['email'])
     print(data['password'])
     with open(jsonFile) as json_data:
@@ -352,7 +352,6 @@ def userLogin(data, jsonFile):
     jsonresponse = col.find({"users.email": data['email']}, {"_id": 0, "users": 0})
     survey = ""
     company = ""
-    response = ""
     for i in jsonresponse:
         company = (i['company'])
         survey = (i['survey'])
@@ -360,14 +359,17 @@ def userLogin(data, jsonFile):
     js["company"] = company
     jsonresponses = col.find({"survey": survey, "company":company, "users.email": data['email']}, {"users": 1.0, "_id": 0})
     for j in jsonresponses:
-        for k, l in j.items():
+        for _, l in j.items():
             for m in l:
                 if m['email'] == data['email']:
-                    print("yes")
                     js["users"].append(m)
-                    js["isValid"] = m['isValid']
                     if m['role'] == "Admin":
                         js["isAdmin"] = "true"
-                        print(js)
-
-    return "done"
+                        js["isValid"] = "true"
+                    elif m['isValid'] == 'True':
+                        js["isAdmin"] = "false"
+                        js["isValid"] = "true"
+                    else:
+                        js["isAdmin"] = "false"
+                        js["isValid"] = "false"
+    return js

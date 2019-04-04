@@ -58,6 +58,17 @@ def pie(df):
     data = json.dumps({'R1': pieR1, 'R2': pieR2, 'R3':pieR3, 'R4':pieR4})
     return data
 
+def getTable(df,sectors,subsectors):
+    list=[]
+    firstrow=['SECTOR|SUBSECTOR', 'Physical', 'Organisational', 'Technical']
+    list.append(firstrow)
+    for sector in sectors:
+       values=[]
+       values.append(sector)
+       for subsec in subsectors:
+          values.append(round(float(df[(df['sector']==sector) & (df['subsector']==subsec)]['subsector_avg'].unique()),2))
+       list.append(values)
+    return dumps(list)
 
 def bar(df):
 
